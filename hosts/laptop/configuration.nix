@@ -190,6 +190,8 @@
 
   # Program to solve a hydrogen cloudfare issue with nixos file structure
   programs.nix-ld.enable = true;
+  # This is done to solve fixed route issues
+  services.envfs.enable = true;
 
   # This is done to allow electron apps to ask for system permissions
 
