@@ -99,6 +99,8 @@
     fzf
     cacert
     glib
+    btop
+    neofetch
   ];
 
   fonts.packages = with pkgs; [
