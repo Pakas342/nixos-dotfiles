@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Support for NTFS and other filesystems
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Bootloader generation removal and garbage collection
   boot.loader.systemd-boot.configurationLimit = 10;
   nix.gc = {
@@ -101,6 +104,7 @@
     glib
     btop
     neofetch
+    usbutils
   ];
 
   fonts.packages = with pkgs; [
@@ -158,6 +162,8 @@
 
   programs.hyprland.enable = true;
 
+  services.blueman.enable = true;
+
   programs.git = {
     enable = true;
     config = {
@@ -199,6 +205,9 @@
 
   # enable wayland support for electron apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # Enable udisks2 for automatic mounting of removable drives in Dolphin
+  services.udisks2.enable = true;
 
   # XDG portals screen sharing
   xdg = {
