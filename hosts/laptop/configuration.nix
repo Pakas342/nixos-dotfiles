@@ -86,7 +86,7 @@
     yadm
     gcc
     nodejs
-    nodePackages.markdownlint-cli2
+    nodePackages.markdownlint-cli
     prettierd
     shopify-cli
     waybar
@@ -156,13 +156,13 @@
     defaultEditor = true;
   };
 
+  hardware.bluetooth.enable = true;
+
   programs.tmux.enable = true;
 
   programs.steam.enable = true;
 
   programs.hyprland.enable = true;
-
-  services.blueman.enable = true;
 
   programs.git = {
     enable = true;
